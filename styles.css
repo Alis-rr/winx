@@ -1,0 +1,30 @@
+:root{
+  --bg:#fffaf8;
+  --card:#ffffff;
+  --accent:#ff69b4;
+  --text:#222;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.4;margin:0;background:var(--bg);color:var(--text)}
+.site-header{background:linear-gradient(90deg,#ffe6f2,#fff1e6);padding:2rem 1rem;text-align:center;border-bottom:2px solid #f3d6e6}
+.site-header h1{margin:0;font-size:2rem}
+.subtitle{margin:0.25rem 0 0;color:#6b4450}
+.container{max-width:1000px;margin:2rem auto;padding:0 1rem}
+.intro{margin-bottom:1.25rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.card{background:var(--card);border-radius:8px;padding:0.5rem;box-shadow:0 6px 18px rgba(0,0,0,0.06);text-align:left}
+.card img{width:100%;height:auto;border-radius:6px}
+.card h3{margin:0.5rem 0 0.25rem;color:var(--accent)}
+.card p{margin:0 0 0.5rem;font-size:0.95rem}
+.note{margin-top:1rem;color:#555;font-size:0.9rem}
+.site-footer{text-align:center;padding:1rem 0;color:#6b4450;border-top:1px solid #fdeef6;margin-top:2rem}
+
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0f0f12;--card:#121217;--accent:#ff8ecb;--text:#eee}
+  .site-header{border-bottom-color:#2a2430}
+}
+
+.music{background:linear-gradient(180deg,#fff8fb,#fffaf8);padding:1rem;border-radius:8px;margin-top:1rem}
+.music h2{margin:0 0 0.5rem;color:var(--accent)}
+.music audio{width:100%;max-width:640px;border-radius:6px}
+.music .credit{margin-top:0.5rem;color:#777;font-size:0.85rem}
