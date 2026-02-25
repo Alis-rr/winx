@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Error><Code>RequestHeaderSectionTooLarge</Code><Message>Your request header section exceeds the maximum allowed size.</Message><MaxSizeAllowed>8192</MaxSizeAllowed><RequestId>461FCS1SWGMTE3GQ</RequestId><HostId>fsob67fU/yJjrspHQ5FX7FH10rT5cEf68NHVI3vfIP6dfdEMMwAj+40f+AdBvWph7AzeAb6RxWI=</HostId></Error>
