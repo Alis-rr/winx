@@ -28,3 +28,40 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-he
 .music h2{margin:0 0 0.5rem;color:var(--accent)}
 .music audio{width:100%;max-width:640px;border-radius:6px}
 .music .credit{margin-top:0.5rem;color:#777;font-size:0.85rem}
+
+/* Animazioni e interazioni */
+@media (prefers-reduced-motion: no-preference) {
+  .site-header{animation:headerDrop 700ms cubic-bezier(.2,.9,.3,1) both}
+  @keyframes headerDrop{from{transform:translateY(-12px);opacity:0}to{transform:none;opacity:1}}
+
+  .container{animation:fadeIn 600ms ease both}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+  .grid .card{opacity:0;transform:translateY(12px) scale(.995);animation:cardIn 560ms cubic-bezier(.22,.9,.36,1) both}
+  @keyframes cardIn{from{opacity:0;transform:translateY(12px) scale(.995)}to{opacity:1;transform:none}}
+
+  /* Stagger per le card (6 elementi) */
+  .grid .card:nth-child(1){animation-delay:80ms}
+  .grid .card:nth-child(2){animation-delay:160ms}
+  .grid .card:nth-child(3){animation-delay:240ms}
+  .grid .card:nth-child(4){animation-delay:320ms}
+  .grid .card:nth-child(5){animation-delay:400ms}
+  .grid .card:nth-child(6){animation-delay:480ms}
+}
+
+/* Effetti hover e focus */
+.card{transition:transform 260ms ease,box-shadow 260ms ease}
+.card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 12px 30px rgba(0,0,0,0.12)}
+.card img{transition:transform 420ms cubic-bezier(.2,.9,.3,1),filter 300ms ease}
+.card:hover img{transform:scale(1.04) rotate(-0.4deg);filter:contrast(1.02)}
+
+.music audio{transition:box-shadow 220ms ease,transform 220ms ease}
+.music audio:focus{outline:none;box-shadow:0 8px 30px rgba(255,105,180,0.12);transform:translateY(-3px)}
+
+.site-footer{transition:opacity 400ms ease,transform 400ms ease}
+.site-footer:hover{opacity:0.95;transform:translateY(-2px)}
+
+/* Rispettare preferenze di riduzione movimento */
+@media (prefers-reduced-motion: reduce){
+  .site-header,.container,.grid .card,.card,.music audio,.site-footer{animation:none;transition:none}
+}
