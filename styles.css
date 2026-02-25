@@ -29,6 +29,15 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-he
 .music audio{width:100%;max-width:640px;border-radius:6px}
 .music .credit{margin-top:0.5rem;color:#777;font-size:0.85rem}
 
+/* Banner immagine in testa */
+.top-banner{display:block;width:100%;height:220px;object-fit:cover;border-bottom:1px solid rgba(0,0,0,0.06)}
+@media (max-width:520px){.top-banner{height:140px}}
+
+/* Immagine nella descrizione della card */
+.card .desc-img{display:block;width:100%;max-width:320px;height:auto;margin:0.5rem 0;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,0.06);object-fit:cover;transition:transform 220ms ease,box-shadow 220ms ease}
+.card:hover .desc-img{transform:translateY(-4px);box-shadow:0 14px 36px rgba(0,0,0,0.10)}
+@media (min-width:800px){.card{display:block}.card .desc-img{float:right;margin-left:1rem;max-width:40%}}
+
 /* Animazioni e interazioni */
 @media (prefers-reduced-motion: no-preference) {
   .site-header{animation:headerDrop 700ms cubic-bezier(.2,.9,.3,1) both}
