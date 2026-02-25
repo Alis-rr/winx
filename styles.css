@@ -27,7 +27,8 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-he
 
 .music{background:linear-gradient(180deg,#fff8fb,#fffaf8);padding:1rem;border-radius:8px;margin-top:1rem}
 .music h2{margin:0 0 0.5rem;color:var(--accent)}
-.music audio{width:100%;max-width:640px;border-radius:6px}
+.video-player{width:100%;max-width:640px;border-radius:6px;overflow:hidden;margin:1rem 0}
+.video-player iframe{display:block}
 .music .credit{margin-top:0.5rem;color:#777;font-size:0.85rem}
 
 /* Banner immagine in testa */
